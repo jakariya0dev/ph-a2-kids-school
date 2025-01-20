@@ -22,7 +22,7 @@
 
 html, body {
   font-family: "Quicksand", serif;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.2;
   color: var(--text-color);
 }
@@ -37,6 +37,14 @@ a{
 
 .mb-2{
     margin-bottom: 2rem;
+}
+
+.text-center{
+    text-align: center;
+}
+
+section{
+    padding: 5rem 0;
 }
 
 .container{
@@ -60,7 +68,7 @@ a{
     font-size: 1.25rem;
     display: inline-block;
     padding: .5rem 2.5rem;
-    background-color: var(--primary-color);
+    background-color: var(--text-color-dark);
     color: var(--text-color-light);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -70,6 +78,7 @@ a{
 .btn-primary:hover{
     filter: brightness(85%);
 }
+
 
 .section-title{
     font-size: 2.6rem;
@@ -153,3 +162,118 @@ nav .logo img{
 }
 
 /* Header End */
+
+/* Course start */
+.course-cards{
+    display: flex;
+    gap: 2rem;
+}
+
+.course-cards .course-card{
+    padding: 2rem;
+    text-align: center;
+    flex-basis: 1;
+    background-color: var(--text-color-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow) inset;
+    transition: var(--transition);
+}
+
+.course-cards .course-card:first-child{
+    box-shadow: 0 1rem 2rem 1rem rgba(0, 128, 0, 0.1) inset;
+
+    a{
+        color: var(--secondary-color)
+    }
+}
+
+.course-cards .course-card:nth-child(2){
+    box-shadow: 0 1rem 2rem 1rem rgba(0, 0, 128, 0.1) inset;
+
+    a{
+        color: var(--primary-color)
+    }
+}
+
+.course-cards .course-card:last-child{
+    box-shadow: 0 1rem 2rem 1rem rgba(255, 0, 0, 0.1) inset;
+
+}
+
+.slider-arrow a{
+    display: inline-block;
+    font-size: 2rem;
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    transition: var(--transition); 
+    
+}
+
+.slider-arrow a:hover{
+    filter: brightness(85%);
+}
+/* Course end */
+
+/* Footer Start */
+
+footer{
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+    padding: 4rem 0;
+}
+
+footer .title{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+footer .container{
+    display: flex;
+    gap: 3rem;
+   
+}
+
+.footer-about{
+    flex: 2;
+}
+
+.footer-about .logo{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.footer-about .logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.footer-menu{
+    flex: 1;
+}
+
+.footer-menu a{
+    display: block;
+    margin-bottom: .5rem;
+    color: var(--text-color-light);
+}
+
+.footer-social-icon{
+    flex: 1;
+}
+
+.footer-social-icon a{
+    display: inline-block;
+    margin-right: .25rem;
+}
+
+/* Footer End */
