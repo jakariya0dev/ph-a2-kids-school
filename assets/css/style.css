@@ -1,0 +1,32 @@
+/* resetting css */
+
+:root{
+  --primary-color: #FEA301;
+  --secondary-color: #01ACFD;
+  --tertiary-color: #8700FF;
+
+  --text-color: #000;
+  --border-radius: 4px;
+  --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}   
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+a{
+  text-decoration: none;
+  color: #333;
+}
