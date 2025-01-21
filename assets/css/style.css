@@ -8,7 +8,7 @@
   --text-color-dark: #000;
   --text-color-light: #fff;
   --border-radius: 8px;
-  --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
   --transition: all 0.3s;
 }
 
@@ -141,6 +141,27 @@ nav .logo img{
     border-radius: 50%;
 }
 
+nav .logo span{
+    position: relative;
+}
+
+nav .logo span::after{
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+nav .logo span:hover::after{
+    width: 100%;
+    
+}
+
 .nav-menu a{
     margin-left: 1rem;
     color: var(--text-color);
@@ -236,7 +257,8 @@ nav .logo img{
     background-image: linear-gradient(to top, rgba(255, 68, 0, 0.2), rgba(255, 68, 0, 0.1));
 
     a{
-        color: var(--secondary-color)
+        color: var(--secondary-color);
+        
     }
 }
 
@@ -244,13 +266,39 @@ nav .logo img{
     background-image: linear-gradient(to top, rgba(0, 255, 0, 0.3), rgba(0, 255, 0, 0.2));
 
     a{
-        color: var(--primary-color)
+        color: var(--primary-color);
     }
 }
 
 .course-cards .course-card:last-child{
     background-image: linear-gradient(to top, rgba(0, 0, 250, 0.2), rgba(0, 0, 250, 0.1));
 
+}
+
+.course-cards .course-card a{
+    position: relative;
+}
+
+.course-cards .course-card a::after{
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.course-cards .course-card a:hover::after{
+    width: 100%;
+    
+}
+
+.course-cards .course-card:hover{
+    transform: translateY(-.5rem);
+    box-shadow: var(--box-shadow);
 }
 
 .slider-arrow a{
@@ -290,8 +338,13 @@ nav .logo img{
 
 .story-card{
     overflow: hidden;
-   background-color: white;
-   border-radius: var(--border-radius);
+    background-color: white;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.story-card:hover{
+    box-shadow: var(--box-shadow);
 }
 
 .story-card .header{
@@ -313,6 +366,10 @@ nav .logo img{
 }
 
 .story-card .content{
+    padding: 2rem;
+ }
+
+ .story-card .content{
     padding: 2rem;
  }
 
@@ -371,6 +428,15 @@ footer .container{
     display: block;
     margin-bottom: .5rem;
     color: var(--text-color-light);
+    border-left: 4px solid transparent;
+    padding-left: 0.5rem;
+    transition: var(--transition);
+    position: relative;
+    background-color: transparent;
+}
+
+.footer-menu a:hover{
+    border-left: 4px solid #000;
 }
 
 .footer-social-icon{
@@ -380,6 +446,11 @@ footer .container{
 .footer-social-icon a{
     display: inline-block;
     margin-right: .25rem;
+    transition: var(--transition);
+}
+
+.footer-social-icon a:hover{
+    mix-blend-mode: difference;
 }
 
 /* Footer End */
