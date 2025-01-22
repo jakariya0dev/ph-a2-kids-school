@@ -364,6 +364,7 @@ nav .logo span:hover::after{
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     gap: 1rem; 
+    cursor: pointer;
 }
 
 .story-card{
