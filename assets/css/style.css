@@ -201,6 +201,19 @@ nav .logo span:hover::after{
     font-size: 1.5rem;
 }
 
+.notice{
+    display: flex;
+    background-color: #e1e8eb;
+    align-items: center;
+}
+
+.notice span{
+    background-color: var(--text-color-dark);
+    color: var(--text-color-light);
+    padding: .5rem 1rem;
+    border-radius: 2px;
+}
+
 /* Hero area */
 
 #hero{
